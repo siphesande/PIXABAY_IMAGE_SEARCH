@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Pixabay Image Search</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"
+    />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Pixabay Image Search</h1>
+      <form>
+        <label for="searchWord">Search below</label>
+        <input class="input" placeholder="search for images..." type="text" />
+        <input class="button" type="submit" />
+      </form>
+      <img id="loadingImage" src="Loading_2.gif" alt="loading" />
+      <section class="images"></section>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>

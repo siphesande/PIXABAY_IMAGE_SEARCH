@@ -21,8 +21,9 @@ function formSubmitted(e) {
 function search(searchWord) {
  
   const url = `${API_URL}&q=${searchWord}`;
-  //sliding_images.style.display = 'none';
-  
+  sliding_images.style.display = '';
+  //prev_images.style.display = 'none';
+  //next_images.style.display = 'none';
   loadingImage.style.display = '';
   imagesSection.innerHTML = '';
   return fetch(url)
@@ -46,8 +47,10 @@ function displayImages(pictures) {
       const img = new Image();
       const imageElement = document.createElement('img');
       imageElement.src = picture.previewURL;
+      imageElement.setAttribute("class", "slide");
       //imagesSection.appendChild(imageElement);
       sliding.appendChild(imageElement);
+
     });
   } else {
     imagesSection.innerHTML = '<p>Sorry, there are no images to show!<p/>'
